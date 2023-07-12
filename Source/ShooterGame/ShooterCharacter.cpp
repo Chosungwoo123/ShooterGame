@@ -16,7 +16,7 @@ void AShooterCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	UE_LOG(LogTemp, Warning, TEXT("BeginPlay() called!"));
+	UE_LOG(LogTemp, Warning, TEXT("BeginPlay Called!"));
 
 	int myInt{42};
 	UE_LOG(LogTemp, Warning, TEXT("int myInt : %d"), myInt);
