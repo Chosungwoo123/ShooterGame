@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Camera/CameraComponent.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "ShooterCharacter.generated.h"
@@ -31,8 +32,15 @@ private:
 	/** Camera boom positioning the camera behind the character */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true")) 
 	class USpringArmComponent* CameraBoom;
+
+	/** Camera that follows the character */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	class UCameraComponent* FollowCamera;
 	
 public:
 	/** Returns CameraBoom SubObject */
 	FORCEINLINE USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+
+	/** Returns FollowCamera SubObject */
+	FORCEINLINE UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 };
