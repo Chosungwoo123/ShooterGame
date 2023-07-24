@@ -86,4 +86,6 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 	PlayerInputComponent->BindAxis("MoveRight", this, &AShooterCharacter::MoveRight);
 	PlayerInputComponent->BindAxis("TurnRate", this, &AShooterCharacter::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AShooterCharacter::LookUpAtRate);
+	PlayerInputComponent->BindAxis("Turn", this, &AShooterCharacter::TurnAtRate);
+	PlayerInputComponent->BindAxis("LookUp", this, &AShooterCharacter::LookUpAtRate);
 }
